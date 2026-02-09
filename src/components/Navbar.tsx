@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import tarsLogo from "@/assets/tars-logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,13 +30,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">T</span>
-          </div>
-          <span className="text-foreground font-semibold text-lg tracking-tight">
-            TARS
-          </span>
+        <a href="#" className="flex items-center">
+          <img src={tarsLogo} alt="TARS AI" className="h-8" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
