@@ -1,14 +1,13 @@
+import tarsLogo from "@/assets/tars-logo.png";
+
 const Footer = () => {
   return (
     <footer className="border-t border-border py-10">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            <div className="h-7 w-7 rounded-md bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xs">T</span>
-            </div>
-            <span className="text-foreground font-semibold text-sm">TARS AI Inc.</span>
-            <span className="text-muted-foreground text-xs ml-2">© 2026</span>
+          <div className="flex items-center gap-3">
+            <img src={tarsLogo} alt="TARS AI" className="h-6" />
+            <span className="text-muted-foreground text-xs">© 2026</span>
           </div>
 
           <div className="flex items-center gap-6 text-xs text-muted-foreground">
