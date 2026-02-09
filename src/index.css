@@ -52,6 +52,8 @@
     --text-secondary: 220 15% 65%;
     --gradient-start: 230 60% 9%;
     --gradient-end: 230 50% 14%;
+    --warning: 36 100% 50%;
+    --warning-foreground: 0 0% 0%;
   }
 }
 

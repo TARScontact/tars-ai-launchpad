@@ -9,6 +9,10 @@ const ContactForm = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
+
+    // Honeypot check
+    if (formData.get("website")) return;
+
     const name = formData.get("name");
     const email = formData.get("email");
     const company = formData.get("company");
@@ -27,7 +31,7 @@ const ContactForm = () => {
     "w-full bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all duration-200";
 
   return (
-    <section id="contact" className="py-24 md:py-32 relative bg-radial-fade" ref={ref}>
+    <section id="waitlist" className="py-24 md:py-32 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,8 +43,7 @@ const ContactForm = () => {
             Join the Waitlist
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            TARS is currently in private beta with select depot operators.
-            Interested in bringing intelligent orchestration to your operations?
+            TARS is currently in private beta with select depot operators running thousands of vehicle cycles daily. Deployments begin April 2026. Interested in bringing intelligent orchestration to your operations?
           </p>
         </motion.div>
 
@@ -51,6 +54,9 @@ const ContactForm = () => {
           onSubmit={handleSubmit}
           className="max-w-lg mx-auto space-y-4"
         >
+          {/* Honeypot */}
+          <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+
           {submitted ? (
             <div className="text-center py-12 rounded-xl border border-primary/20 bg-card">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
@@ -64,12 +70,12 @@ const ContactForm = () => {
           ) : (
             <>
               <div className="grid grid-cols-2 gap-4">
-                <input name="name" required placeholder="Name" className={inputClasses} maxLength={100} />
-                <input name="email" type="email" required placeholder="Email" className={inputClasses} maxLength={255} />
+                <input name="name" required placeholder="Name" className={inputClasses} maxLength={100} aria-label="Name" />
+                <input name="email" type="email" required placeholder="Email" className={inputClasses} maxLength={255} aria-label="Email" />
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <input name="company" required placeholder="Company" className={inputClasses} maxLength={100} />
-                <input name="role" required placeholder="Role" className={inputClasses} maxLength={100} />
+                <input name="company" required placeholder="Company" className={inputClasses} maxLength={100} aria-label="Company" />
+                <input name="role" required placeholder="Role" className={inputClasses} maxLength={100} aria-label="Role" />
               </div>
               <textarea
                 name="message"
@@ -77,10 +83,11 @@ const ContactForm = () => {
                 rows={3}
                 className={inputClasses + " resize-none"}
                 maxLength={1000}
+                aria-label="Message"
               />
               <button
                 type="submit"
-                className="w-full bg-primary text-primary-foreground font-medium py-3 rounded-lg hover:opacity-90 transition-opacity glow-sm"
+                className="w-full bg-primary text-primary-foreground font-medium py-3 rounded-lg hover:opacity-90 hover:scale-[1.02] transition-all glow-sm min-h-[44px]"
               >
                 Request Access
               </button>

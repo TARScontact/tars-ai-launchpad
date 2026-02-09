@@ -4,6 +4,7 @@ import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import TrustedBy from "@/components/TrustedBy";
 import WhyNow from "@/components/WhyNow";
+import ContactSection from "@/components/ContactSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <SolutionSection />
       <TrustedBy />
       <WhyNow />
+      <ContactSection />
       <ContactForm />
       <Footer />
     </div>
