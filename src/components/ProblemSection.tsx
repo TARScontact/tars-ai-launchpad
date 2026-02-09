@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const ProblemSection = () => {
@@ -14,7 +13,7 @@ const ProblemSection = () => {
         </svg>
       ),
       title: "Manual Coordination",
-      description: "Depots coordinate 100+ vehicles daily using whiteboards and walkie-talkies.",
+      description: "Depots coordinate 100+ vehicles daily using whiteboards, radios, and spreadsheets—the same tools from 20 years ago.",
     },
     {
       icon: (
@@ -22,8 +21,8 @@ const ProblemSection = () => {
           <path d="M13 17l5-5-5-5M6 17l5-5-5-5" />
         </svg>
       ),
-      title: "Scaling Chaos",
-      description: "Every new depot multiplies operational complexity exponentially.",
+      title: "Control Collapses at Scale",
+      description: "Manual operations break down beyond 400-600 vehicles. As fleets scale from dozens to thousands, coordination complexity grows exponentially.",
     },
     {
       icon: (
@@ -31,8 +30,8 @@ const ProblemSection = () => {
           <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
         </svg>
       ),
-      title: "No Orchestration Layer",
-      description: "AV fleets have sophisticated autonomy software but manual depot operations.",
+      title: "No Orchestration Software",
+      description: "AV fleets have sophisticated autonomy stacks but manual depot operations. The slowest layer limits the entire system.",
     },
   ];
 
@@ -74,6 +73,16 @@ const ProblemSection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="text-center text-muted-foreground max-w-2xl mx-auto text-sm mt-12"
+        >
+          Autonomy wins rides. Depot ops wins scale.{" "}
+          <span className="text-foreground font-medium">→ Driving is software. Scaling is orchestration.</span>
+        </motion.p>
       </div>
     </section>
   );

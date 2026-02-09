@@ -30,7 +30,7 @@ const SolutionSection = () => {
           <p className="text-muted-foreground text-lg leading-relaxed">
             TARS provides the orchestration layer that autonomous vehicle depots have been missing.
             Our platform coordinates charging, cleaning, inspection, and dispatch workflows—turning
-            operational chaos into predictable, scalable systems.
+            operational chaos into predictable, scalable systems that grow with your fleet.
           </p>
         </motion.div>
 
@@ -42,7 +42,6 @@ const SolutionSection = () => {
           className="max-w-2xl mx-auto"
         >
           <div className="flex items-center justify-between relative">
-            {/* Connecting line */}
             <div className="absolute top-1/2 left-0 right-0 h-px bg-border -translate-y-1/2" />
             <motion.div
               className="absolute top-1/2 left-0 h-px bg-primary -translate-y-1/2"
@@ -50,7 +49,7 @@ const SolutionSection = () => {
               animate={inView ? { width: "100%" } : {}}
               transition={{ duration: 2.5, delay: 0.5, ease: "easeInOut" }}
             />
-            {steps.map((step, i) => (
+            {steps.map((step) => (
               <motion.div
                 key={step.label}
                 className="relative z-10 flex flex-col items-center"
@@ -73,7 +72,7 @@ const SolutionSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="text-center text-text-secondary text-sm mt-12"
+          className="text-center text-muted-foreground text-sm mt-12"
         >
           Built for the operators who keep autonomous fleets running 24/7.
         </motion.p>

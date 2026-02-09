@@ -1,14 +1,40 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
+
+const CountUp = ({ target, suffix = "", inView }: { target: number; suffix?: string; inView: boolean }) => {
+  const [count, setCount] = useState(0);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    if (!inView || hasAnimated.current) return;
+    hasAnimated.current = true;
+    const duration = 1500;
+    const steps = 40;
+    const increment = target / steps;
+    let current = 0;
+    const interval = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        setCount(target);
+        clearInterval(interval);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, duration / steps);
+    return () => clearInterval(interval);
+  }, [inView, target]);
+
+  return <>{count.toLocaleString()}{suffix}</>;
+};
 
 const WhyNow = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { value: "200,000+", label: "autonomous miles driven daily across US fleets" },
-    { value: "400–600", label: "vehicles—the threshold where manual ops collapse" },
-    { value: "4–6", label: "depot cycles required per AV, per day" },
+    { value: 200000, suffix: "+", label: "autonomous miles driven daily across US fleets", accent: false },
+    { value: 400, suffix: "–600", label: "vehicles—the threshold where manual ops collapse", accent: true },
+    { value: 4, suffix: "–6", label: "depot cycles required per AV, per day", accent: false },
   ];
 
   return (
@@ -31,14 +57,20 @@ const WhyNow = () => {
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
           {stats.map((stat, i) => (
             <motion.div
-              key={stat.value}
+              key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.15 * i }}
-              className="text-center rounded-xl border border-border bg-card p-8"
+              className={`text-center rounded-xl border p-8 ${
+                stat.accent
+                  ? "border-warning/30 bg-warning/5"
+                  : "border-border bg-card"
+              }`}
             >
-              <div className="text-3xl md:text-4xl font-bold text-gradient mb-3">
-                {stat.value}
+              <div className={`text-3xl md:text-4xl font-bold mb-3 ${
+                stat.accent ? "text-warning" : "text-gradient"
+              }`}>
+                <CountUp target={stat.value} suffix={stat.suffix} inView={inView} />
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {stat.label}
@@ -53,7 +85,7 @@ const WhyNow = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center text-muted-foreground max-w-2xl mx-auto text-base"
         >
-          As fleets expand from dozens to thousands of vehicles, orchestration becomes critical infrastructure.
+          Manual depot operations hit economic limits as labor costs rise and vehicle uptime falls. The scaling bottleneck isn't on the road—it's in the depot.
         </motion.p>
       </div>
     </section>

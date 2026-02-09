@@ -54,6 +54,10 @@ export default {
         "surface-hover": "hsl(var(--surface-hover))",
         "text-secondary": "hsl(var(--text-secondary))",
         glow: "hsl(var(--glow))",
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

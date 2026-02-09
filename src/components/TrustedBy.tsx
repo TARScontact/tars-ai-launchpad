@@ -6,9 +6,9 @@ const TrustedBy = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   const partners = [
-    "Tier-1 AV Fleet Operator",
-    "National Depot Staffing Provider",
-    "Multi-City AV Deployment",
+    { title: "Tier-1 AV Fleet Operator", sub: "Multi-city autonomous rideshare deployment" },
+    { title: "National Depot Staffing Provider", sub: "Managing 10,000+ depot associates across Waymo, Uber, Cruise operations" },
+    { title: "Multi-City AV Deployment", sub: "Scaling operations from dozens to hundreds of vehicles" },
   ];
 
   return (
@@ -31,14 +31,17 @@ const TrustedBy = () => {
         <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
           {partners.map((partner, i) => (
             <motion.div
-              key={partner}
+              key={partner.title}
               initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.1 * i }}
-              className="flex items-center justify-center rounded-xl border border-border bg-card/50 px-6 py-8"
+              className="flex flex-col items-center justify-center rounded-xl border border-border bg-card/50 px-6 py-8 text-center"
             >
-              <span className="text-sm text-muted-foreground font-medium text-center">
-                {partner}
+              <span className="text-sm text-foreground font-medium mb-2">
+                {partner.title}
+              </span>
+              <span className="text-xs text-muted-foreground leading-relaxed">
+                {partner.sub}
               </span>
             </motion.div>
           ))}
