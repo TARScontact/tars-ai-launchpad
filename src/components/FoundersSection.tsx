@@ -6,13 +6,13 @@ const founders = [
     name: "Arun Arunagiri",
     title: "Co-Founder & CEO",
     background:
-      "Led autonomous vehicle product development at Cruise, including fleet deployment platforms and the Cruise Origin launch on Austin public roads. Deep expertise in AV systems, fleet management tooling, and depot automation.",
+      "Former AV product lead. Built fleet deployment platforms and operational tooling for autonomous vehicle programs.",
   },
   {
     name: "Sheik Fazulul Haque",
     title: "Co-Founder & COO",
     background:
-      "Scaled Tesla's global service operations from 50 to 250+ locations. Led operational scaling at Amazon across multi-state warehouse operations. Proven track record building repeatable processes for labor-intensive, multi-site environments.",
+      "Former operations leader at a top EV manufacturer. Scaled service operations across 250+ locations nationwide.",
   },
 ];
 
@@ -65,7 +65,7 @@ const FoundersSection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center text-muted-foreground max-w-3xl mx-auto text-sm italic"
         >
-          "AV depots today resemble Tesla service operations before that software existed — except with higher complexity from autonomous arrivals, charging constraints, and multi-stage processing."
+          "We've seen autonomous fleets struggle to scale — not because of the technology, but because of the operations behind it."
         </motion.p>
       </div>
     </section>

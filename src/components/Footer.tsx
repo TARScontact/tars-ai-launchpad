@@ -68,18 +68,6 @@ const Footer = () => {
                   LinkedIn
                 </a>
               </li>
-              <li>
-                {/* TODO: Create /privacy page */}
-                <a href="/privacy" className="text-muted-foreground text-xs hover:text-foreground transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                {/* TODO: Create /terms page */}
-                <a href="/terms" className="text-muted-foreground text-xs hover:text-foreground transition-colors">
-                  Terms of Service
-                </a>
-              </li>
             </ul>
           </div>
         </div>
