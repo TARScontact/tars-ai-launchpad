@@ -77,12 +77,12 @@ const SolutionSection = () => {
           className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto mt-16"
         >
           {[
-            { title: "Automated Bay Assignment", description: "Routes vehicles to charging, cleaning, inspection, and service bays based on vehicle state and real-time availability." },
-            { title: "Mobile Task Routing", description: "Step-by-step workflows, checklists, and photo documentation delivered to depot associates' devices." },
-            { title: "Real-Time Visibility", description: "Progress tracking and bottleneck detection across all shifts, bays, and vehicle stages." },
-            { title: "Exception Handling", description: "Automated escalation for charger faults, dangerous items, biohazards, and unplanned maintenance." },
-            { title: "Predictive Planning", description: "Arrival and throughput forecasting to optimize staffing levels and bay capacity." },
-            { title: "Cross-Depot Analytics", description: "Performance benchmarking across locations, partners, and time periods." },
+            { title: "Bay Assignment", description: "Automated routing to charging, cleaning, and service bays based on vehicle state." },
+            { title: "Mobile Workflows", description: "Step-by-step task routing with checklists and photo documentation." },
+            { title: "Real-Time Visibility", description: "Progress tracking and bottleneck detection across shifts." },
+            { title: "Exception Handling", description: "Automated escalation for faults, hazards, and unplanned maintenance." },
+            { title: "Predictive Planning", description: "Forecasting for staffing levels and bay capacity." },
+            { title: "Cross-Depot Analytics", description: "Performance benchmarking across locations and partners." },
           ].map((card, i) => (
             <motion.div
               key={card.title}

@@ -43,8 +43,8 @@ const ContactForm = () => {
             Request Early Access
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            TARS is in private beta with depot operators managing thousands of vehicle cycles daily.
-            Initial deployments begin April 2026. Access is limited to teams actively scaling autonomous fleet operations.
+            TARS is in private beta with select depot operators. Initial deployments begin 2026.
+            Access is limited to teams actively scaling autonomous fleet operations.
           </p>
         </motion.div>
 

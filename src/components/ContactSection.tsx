@@ -59,7 +59,7 @@ const ContactSection = () => {
               contact@tarsgroup.co
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              TARS is in private beta with select depot operators running real autonomous fleets.
+              TARS is in private beta with depot operators managing autonomous vehicle fleets.
             </p>
           </motion.div>
 
