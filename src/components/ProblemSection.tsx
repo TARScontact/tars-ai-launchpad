@@ -13,7 +13,7 @@ const ProblemSection = () => {
         </svg>
       ),
       title: "Manual Coordination",
-      description: "Depot teams coordinate 100+ vehicle cycles daily with whiteboards, radios, and spreadsheets. The same tools they used 20 years ago—now managing million-dollar autonomous assets.",
+      description: "Depot teams manage autonomous vehicle operations with whiteboards, radios, and spreadsheets — tools that weren't built for this.",
     },
     {
       icon: (
@@ -22,7 +22,7 @@ const ProblemSection = () => {
         </svg>
       ),
       title: "Operations Collapse at Scale",
-      description: "Manual coordination breaks past 75–150 vehicles. Labor costs rise, vehicle downtime compounds, and every missed cycle cascades across the fleet.",
+      description: "What works at 10 vehicles breaks at 75. Manual coordination doesn't scale — and adding people only makes it more fragile.",
     },
     {
       icon: (
@@ -31,7 +31,7 @@ const ProblemSection = () => {
         </svg>
       ),
       title: "No Orchestration Layer Exists",
-      description: "AV companies invest billions in autonomy stacks but run depots on tribal knowledge. The slowest layer in the system gates every vehicle that reaches the road.",
+      description: "Billions go into autonomy. Depot operations still run on tribal knowledge and shift-to-shift handoffs.",
     },
   ];
 
@@ -80,8 +80,7 @@ const ProblemSection = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center text-muted-foreground max-w-2xl mx-auto text-sm"
         >
-          Autonomy wins rides. Depot operations win scale.{" "}
-          <span className="text-foreground font-medium">→ Driving is already software. Scaling requires orchestration.</span>
+          <span className="text-foreground font-medium">Driving is already software. Scaling requires orchestration.</span>
         </motion.p>
       </div>
     </section>
