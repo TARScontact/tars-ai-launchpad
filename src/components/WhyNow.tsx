@@ -32,9 +32,9 @@ const WhyNow = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { value: 200000, suffix: "+", label: "autonomous miles driven daily across US fleets—and growing", accent: false },
-    { value: 75, suffix: "–150", label: "vehicles — the threshold where manual depot coordination starts breaking down", accent: true },
-    { value: 4, suffix: "–6", label: "depot cycles per vehicle per day—each one a potential failure point", accent: false },
+    { value: 20, suffix: "+", label: "cities with active autonomous vehicle operations in the US — and expanding fast", accent: false, useCountUp: true },
+    { value: 75, suffix: "–150", label: "vehicles — the point where manual depot coordination starts breaking down in new markets", accent: true, useCountUp: true },
+    { value: null, suffix: "", label: "staffing ratios common in early AV city launches — scaling with people, not systems", accent: false, useCountUp: false, staticText: "2x" },
   ];
 
   return (
@@ -70,7 +70,11 @@ const WhyNow = () => {
               <div className={`text-3xl md:text-4xl font-bold mb-3 ${
                 stat.accent ? "text-warning" : "text-gradient"
               }`}>
-                <CountUp target={stat.value} suffix={stat.suffix} inView={inView} />
+                {stat.useCountUp ? (
+                  <CountUp target={stat.value!} suffix={stat.suffix} inView={inView} />
+                ) : (
+                  stat.staticText
+                )}
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {stat.label}
@@ -85,7 +89,7 @@ const WhyNow = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center text-muted-foreground max-w-2xl mx-auto text-base"
         >
-          Every fleet hitting multi-city expansion faces the same wall: labor costs rise linearly, vehicle downtime compounds, and manual coordination can't keep up. The constraint on autonomous scale isn't the vehicle—it's the depot.
+          Every fleet hitting multi-city expansion faces the same wall: operations scale by adding people, not systems. The constraint on autonomous scale isn't the vehicle — it's the depot.
         </motion.p>
       </div>
     </section>
