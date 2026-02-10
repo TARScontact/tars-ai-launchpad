@@ -74,11 +74,30 @@ const ProblemSection = () => {
           ))}
         </div>
 
+        {/* Economic Impact Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="grid grid-cols-3 gap-6 max-w-3xl mx-auto mt-12 mb-12"
+        >
+          {[
+            { value: "3.6", label: "additional trips per vehicle per day unlocked by reducing depot bottlenecks" },
+            { value: "10–15%", label: "immediate uptime gains from eliminating congestion and manual coordination" },
+            { value: "$2.4M", label: "monthly revenue at risk per 400-vehicle fleet from current depot inefficiencies" },
+          ].map((stat, i) => (
+            <div key={i} className="text-center">
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">{stat.value}</div>
+              <p className="text-muted-foreground text-xs leading-relaxed">{stat.label}</p>
+            </div>
+          ))}
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center text-muted-foreground max-w-2xl mx-auto text-sm mt-12"
+          className="text-center text-muted-foreground max-w-2xl mx-auto text-sm"
         >
           Autonomy wins rides. Depot operations win scale.{" "}
           <span className="text-foreground font-medium">→ Driving is already software. Scaling requires orchestration.</span>

@@ -33,7 +33,7 @@ const WhyNow = () => {
 
   const stats = [
     { value: 200000, suffix: "+", label: "autonomous miles driven daily across US fleets—and growing", accent: false },
-    { value: 400, suffix: "–600", label: "vehicles—the hard limit where manual depot operations break", accent: true },
+    { value: 75, suffix: "–150", label: "vehicles — the threshold where manual depot coordination breaks down in new markets", accent: true },
     { value: 4, suffix: "–6", label: "depot cycles per vehicle per day—each one a potential failure point", accent: false },
   ];
 

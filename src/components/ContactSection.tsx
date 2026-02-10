@@ -6,25 +6,24 @@ const ContactSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
 
     // Honeypot check
     if (formData.get("website")) return;
 
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const company = formData.get("company");
-    const role = formData.get("role");
-    const message = formData.get("message");
-
-    const subject = encodeURIComponent(`Contact from ${name} - ${company}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nRole: ${role}\n\nMessage:\n${message || "N/A"}`
-    );
-    window.location.href = `mailto:contact@tarsgroup.co?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    try {
+      // TODO: Replace with your Formspree form ID from https://formspree.io
+      const response = await fetch("https://formspree.io/f/mdalkvyl", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+      if (response.ok) setSubmitted(true);
+    } catch (error) {
+      console.error("Form error:", error);
+    }
   };
 
   const inputClasses =
@@ -61,8 +60,6 @@ const ContactSection = () => {
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed">
               TARS is in private beta with select depot operators running real autonomous fleets.
-              We work directly with operations teams managing Waymo, Uber, and multi-city AV
-              deployments. If you're hitting the limits of manual coordination, we should talk.
             </p>
           </motion.div>
 
