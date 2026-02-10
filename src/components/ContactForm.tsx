@@ -14,7 +14,7 @@ const ContactForm = () => {
   if (formData.get("website")) return;
 
   try {
-    const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+    const response = await fetch("https://formspree.io/f/mdalkvyl", {
       method: "POST",
       body: formData,
       headers: { Accept: "application/json" },
