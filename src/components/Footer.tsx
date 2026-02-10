@@ -55,7 +55,8 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com"
+                  // TODO: Confirm exact LinkedIn company URL
+                  href="https://www.linkedin.com/company/tars-ai-inc"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground text-xs hover:text-foreground transition-colors inline-flex items-center gap-1.5"
@@ -68,12 +69,14 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground text-xs hover:text-foreground transition-colors">
+                {/* TODO: Create /privacy page */}
+                <a href="/privacy" className="text-muted-foreground text-xs hover:text-foreground transition-colors">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground text-xs hover:text-foreground transition-colors">
+                {/* TODO: Create /terms page */}
+                <a href="/terms" className="text-muted-foreground text-xs hover:text-foreground transition-colors">
                   Terms of Service
                 </a>
               </li>
