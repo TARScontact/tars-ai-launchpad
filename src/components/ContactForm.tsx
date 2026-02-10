@@ -6,26 +6,26 @@ const ContactForm = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  const formData = new FormData(e.currentTarget);
 
-    // Honeypot check
-    if (formData.get("website")) return;
+  // Honeypot check
+  if (formData.get("website")) return;
 
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const company = formData.get("company");
-    const role = formData.get("role");
-    const message = formData.get("message");
-
-    const subject = encodeURIComponent(`Early Access Request from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nRole: ${role}\n\nMessage:\n${message || "N/A"}`
-    );
-    window.location.href = `mailto:contact@tarsgroup.co?subject=${subject}&body=${body}`;
-    setSubmitted(true);
-  };
+  try {
+    const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" },
+    });
+    if (response.ok) {
+      setSubmitted(true);
+    }
+  } catch (error) {
+    console.error("Form submission error:", error);
+  }
+};
 
   const inputClasses =
     "w-full bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all duration-200";
