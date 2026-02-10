@@ -5,7 +5,6 @@ const Footer = () => {
     { label: "Problem", href: "#problem" },
     { label: "Solution", href: "#solution" },
     { label: "Why Now", href: "#why-now" },
-    { label: "Contact", href: "#contact" },
   ];
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -56,7 +55,7 @@ const Footer = () => {
               <li>
                 <a
                   // TODO: Confirm exact LinkedIn company URL
-                  href="https://www.linkedin.com/company/tars-ai-inc"
+                  href="https://linkedin.com/company/tarsgroup"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground text-xs hover:text-foreground transition-colors inline-flex items-center gap-1.5"
