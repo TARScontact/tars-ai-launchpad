@@ -5,7 +5,7 @@ import SolutionSection from "@/components/SolutionSection";
 import TrustedBy from "@/components/TrustedBy";
 import WhyNow from "@/components/WhyNow";
 
-import ContactSection from "@/components/ContactSection";
+
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
@@ -19,7 +19,7 @@ const Index = () => {
       <TrustedBy />
       <WhyNow />
       
-      <ContactSection />
+      
       <ContactForm />
       <Footer />
     </div>
