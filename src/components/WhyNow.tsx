@@ -32,9 +32,9 @@ const WhyNow = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { value: 200000, suffix: "+", label: "autonomous miles driven daily across US fleets", accent: false },
-    { value: 400, suffix: "–600", label: "vehicles—the threshold where manual ops collapse", accent: true },
-    { value: 4, suffix: "–6", label: "depot cycles required per AV, per day", accent: false },
+    { value: 200000, suffix: "+", label: "autonomous miles driven daily across US fleets—and growing", accent: false },
+    { value: 400, suffix: "–600", label: "vehicles—the hard limit where manual depot operations break", accent: true },
+    { value: 4, suffix: "–6", label: "depot cycles per vehicle per day—each one a potential failure point", accent: false },
   ];
 
   return (
@@ -85,7 +85,7 @@ const WhyNow = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center text-muted-foreground max-w-2xl mx-auto text-base"
         >
-          Manual depot operations hit economic limits as labor costs rise and vehicle uptime falls. The scaling bottleneck isn't on the road—it's in the depot.
+          Every fleet hitting multi-city expansion faces the same wall: labor costs rise linearly, vehicle downtime compounds, and manual coordination can't keep up. The constraint on autonomous scale isn't the vehicle—it's the depot.
         </motion.p>
       </div>
     </section>

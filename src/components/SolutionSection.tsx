@@ -28,9 +28,10 @@ const SolutionSection = () => {
             Software-Defined Depot Operations
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            TARS provides the orchestration layer that autonomous vehicle depots have been missing.
-            Our platform coordinates charging, cleaning, inspection, and dispatch workflows—turning
-            operational chaos into predictable, scalable systems that grow with your fleet.
+            TARS replaces manual depot coordination with end-to-end orchestration across charging,
+            cleaning, inspection, and dispatch. System-driven workflows route exceptions in real time,
+            enforce safety escalations for dangerous items and biohazards, and give supervisors
+            full auditability—so every vehicle cycle is accounted for, not just tracked.
           </p>
         </motion.div>
 
@@ -74,7 +75,7 @@ const SolutionSection = () => {
           transition={{ duration: 0.6, delay: 1.2 }}
           className="text-center text-muted-foreground text-sm mt-12"
         >
-          Built for the operators who keep autonomous fleets running 24/7.
+          Built with depot operators. Not in a lab.
         </motion.p>
       </div>
     </section>

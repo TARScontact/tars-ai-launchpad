@@ -40,7 +40,7 @@ const ContactSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Ready to Transform Your Depot Operations?
+            Scaling Past Manual Depot Operations?
           </h2>
         </motion.div>
 
@@ -52,7 +52,7 @@ const ContactSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col justify-center"
           >
-            <h3 className="text-2xl font-bold text-foreground mb-4">Get in Touch</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-4">Talk to Us</h3>
             <a
               href="mailto:contact@tarsgroup.co"
               className="text-primary hover:underline text-sm mb-6 inline-block"
@@ -60,9 +60,9 @@ const ContactSection = () => {
               contact@tarsgroup.co
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              TARS is currently in private beta with select depot operators. Interested in bringing
-              intelligent orchestration to your operations? We're working with operators managing
-              Waymo, Uber, and multi-city AV deployments.
+              TARS is in private beta with select depot operators running real autonomous fleets.
+              We work directly with operations teams managing Waymo, Uber, and multi-city AV
+              deployments. If you're hitting the limits of manual coordination, we should talk.
             </p>
           </motion.div>
 
