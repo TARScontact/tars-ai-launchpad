@@ -80,7 +80,7 @@ const ProblemSection = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center text-muted-foreground max-w-2xl mx-auto text-sm"
         >
-          <span className="text-foreground font-medium">Driving is already software. Scaling requires orchestration.</span>
+          <span className="text-foreground font-medium">The bottleneck was never the vehicle. It's everything that happens between rides.</span>
         </motion.p>
       </div>
     </section>
