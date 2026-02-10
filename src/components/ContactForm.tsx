@@ -40,10 +40,11 @@ const ContactForm = () => {
           className="max-w-xl mx-auto text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Join the Waitlist
+            Request Early Access
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            TARS is currently in private beta with select depot operators running thousands of vehicle cycles daily. Deployments begin April 2026. Interested in bringing intelligent orchestration to your operations?
+            TARS is in private beta with depot operators managing thousands of vehicle cycles daily.
+            Initial deployments begin April 2026. Access is limited to teams actively scaling autonomous fleet operations.
           </p>
         </motion.div>
 

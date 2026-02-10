@@ -25,7 +25,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <p className="text-primary text-sm font-medium tracking-[0.25em] uppercase mb-6">
-            Autonomous Vehicle Infrastructure
+            Depot Orchestration for Autonomous Fleets
           </p>
         </motion.div>
 
@@ -35,8 +35,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-4xl sm:text-5xl md:text-7xl font-bold text-foreground leading-[1.1] mb-6 max-w-4xl mx-auto"
         >
-          Autonomous Operations,{" "}
-          <span className="text-gradient">Orchestrated</span>
+          The Bottleneck Isn't Autonomy.{" "}
+          <span className="text-gradient">It's the Depot.</span>
         </motion.h1>
 
         <motion.p
@@ -45,8 +45,8 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.6 }}
           className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          TARS transforms how autonomous vehicle fleets manage depot operations—from
-          manual coordination to intelligent orchestration.
+          TARS is the orchestration layer for autonomous vehicle depot operations—replacing
+          whiteboards and radios with software-defined workflows that scale.
         </motion.p>
 
         <motion.div

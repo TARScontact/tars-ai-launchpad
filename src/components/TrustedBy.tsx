@@ -6,9 +6,9 @@ const TrustedBy = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   const partners = [
-    { title: "Tier-1 AV Fleet Operator", sub: "Multi-city autonomous rideshare deployment" },
-    { title: "National Depot Staffing Provider", sub: "Managing 10,000+ depot associates across Waymo, Uber, Cruise operations" },
-    { title: "Multi-City AV Deployment", sub: "Scaling operations from dozens to hundreds of vehicles" },
+    { title: "Tier-1 AV Fleet Operator", sub: "Pilot deployment across multi-city autonomous rideshare operations" },
+    { title: "National Depot Staffing Provider", sub: "10,000+ depot associates supporting Waymo, Uber, and Cruise fleets" },
+    { title: "Multi-City Expansion Program", sub: "Validating orchestration workflows as fleets scale past manual limits" },
   ];
 
   return (
@@ -21,10 +21,10 @@ const TrustedBy = () => {
           className="text-center mb-12"
         >
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-            Trusted by Leaders in Autonomous Operations
+            Built With Operators, Not Around Them
           </h2>
           <p className="text-muted-foreground text-sm">
-            Partnering with operators managing thousands of autonomous vehicle cycles daily.
+            In private beta with depot teams managing hundreds of autonomous vehicles daily.
           </p>
         </motion.div>
 

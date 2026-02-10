@@ -21,7 +21,7 @@ const Footer = () => {
           <div>
             <img src={tarsLogo} alt="TARS AI" className="h-7 mb-4" />
             <p className="text-muted-foreground text-xs leading-relaxed mb-4 max-w-[240px]">
-              Orchestrating the Future of Autonomous Operations
+              The orchestration layer for autonomous vehicle depot operations.
             </p>
             <span className="text-muted-foreground text-xs">© 2026 TARS AI Inc.</span>
           </div>
