@@ -45,9 +45,8 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.6 }}
           className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          TARS AI is an AI-powered depot operator, owning the data, playbooks, and labor that keep
-          autonomous fleets on the road, maximizing uptime, minimizing cost per mile, and compounding
-          both with every depot we run.
+          TARS AI is an AI-powered depot operations platform, purpose-built to maximize uptime
+          and minimize cost per mile for every autonomous fleet we serve.
         </motion.p>
 
         <motion.div
