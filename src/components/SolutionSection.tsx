@@ -7,9 +7,11 @@ const SolutionSection = () => {
 
   const steps = [
     { label: "Charging", description: "Optimized charging schedules that minimize downtime and maximize vehicle availability.", delay: 0 },
-    { label: "Cleaning", description: "Task-routed cleaning workflows with skill-based assignment and real-time progress tracking.", delay: 0.8 },
-    { label: "Inspection", description: "Automated inspection sequencing with safety hold protocols that block dispatch until resolved.", delay: 1.6 },
-    { label: "Dispatch", description: "System-verified readiness gates ensure every vehicle leaving the depot is cleared, logged, and on time.", delay: 2.4 },
+    { label: "Cleaning", description: "Task-routed cleaning workflows with skill-based assignment and real-time progress tracking.", delay: 0.5 },
+    { label: "Movement & Staging", description: "Intelligent vehicle routing across depot lanes, eliminating congestion and ensuring every vehicle reaches the next step without manual coordination.", delay: 1.0 },
+    { label: "Inspection", description: "Structured inspection workflows that surface vehicle status in real time, with every check logged and verified before the vehicle moves forward.", delay: 1.5 },
+    { label: "Triage & Service", description: "Automated escalation when a vehicle needs intervention beyond standard prep. Safety holds, maintenance flags, and exception handling built into the workflow so nothing leaves the depot unresolved.", delay: 2.0 },
+    { label: "Dispatch", description: "System-verified readiness gates ensure every vehicle leaving the depot is cleared, logged, and on time.", delay: 2.5 },
   ];
 
   return (
@@ -75,7 +77,7 @@ const SolutionSection = () => {
           transition={{ duration: 0.6, delay: 1.6 }}
           className="text-center text-muted-foreground text-sm mt-12"
         >
-          Built with depot operators. Not in a lab.
+          Designed from the depot floor up. Proven in live AV operations.
         </motion.p>
       </div>
     </section>
