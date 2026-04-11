@@ -87,7 +87,7 @@ const ProblemSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center text-muted-foreground max-w-2xl mx-auto text-sm"
+          className="text-center text-muted-foreground max-w-2xl mx-auto text-sm mt-10"
         >
           <span className="text-foreground font-medium">The bottleneck was never the vehicle. It's everything that happens between rides.</span>
         </motion.p>
