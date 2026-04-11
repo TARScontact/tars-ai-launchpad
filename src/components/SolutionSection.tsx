@@ -77,7 +77,7 @@ const SolutionSection = () => {
           transition={{ duration: 0.6, delay: 1.6 }}
           className="text-center text-muted-foreground text-sm mt-12"
         >
-          Built with depot operators. Not in a lab.
+          Designed from the depot floor up. Proven in live AV operations.
         </motion.p>
       </div>
     </section>
