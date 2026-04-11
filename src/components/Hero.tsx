@@ -25,7 +25,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <p className="text-primary text-sm font-medium tracking-[0.25em] uppercase mb-6">
-            Depot Orchestration for Autonomous Fleets
+            AI-Powered Depot Operations
           </p>
         </motion.div>
 

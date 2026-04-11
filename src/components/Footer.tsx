@@ -20,7 +20,7 @@ const Footer = () => {
           <div>
             <img src={tarsLogo} alt="TARS AI" className="h-7 mb-4" />
             <p className="text-muted-foreground text-xs leading-relaxed mb-4 max-w-[240px]">
-              The orchestration layer for autonomous vehicle depot operations.
+              AI-powered depot operations for autonomous fleets, maximizing uptime and minimizing cost per mile with every depot we run.
             </p>
             <span className="text-muted-foreground text-xs">© 2026 TARS AI Inc.</span>
           </div>
