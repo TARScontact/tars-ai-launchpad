@@ -5,7 +5,6 @@ const Footer = () => {
     { label: "Problem", href: "#problem" },
     { label: "Solution", href: "#solution" },
   ];
-  ];
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
