@@ -6,12 +6,12 @@ const SolutionSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   const steps = [
-    { label: "Charging", description: "Optimized charging schedules that minimize downtime and maximize vehicle availability.", delay: 0 },
-    { label: "Cleaning", description: "Task-routed cleaning workflows with skill-based assignment and real-time progress tracking.", delay: 0.5 },
-    { label: "Movement & Staging", description: "Intelligent vehicle routing across depot lanes, eliminating congestion and ensuring every vehicle reaches the next step without manual coordination.", delay: 1.0 },
-    { label: "Inspection", description: "Structured inspection workflows that surface vehicle status in real time, with every check logged and verified before the vehicle moves forward.", delay: 1.5 },
-    { label: "Triage & Service", description: "Automated escalation when a vehicle needs intervention beyond standard prep. Safety holds, maintenance flags, and exception handling built into the workflow so nothing leaves the depot unresolved.", delay: 2.0 },
-    { label: "Dispatch", description: "System-verified readiness gates ensure every vehicle leaving the depot is cleared, logged, and on time.", delay: 2.5 },
+    { label: "Charging", description: "Optimized charging schedules that minimize downtime and maximize vehicle availability. Every charge cycle is tracked and sequenced to keep the fleet moving.", delay: 0 },
+    { label: "Cleaning", description: "Task-routed cleaning workflows with skill-based assignment and real-time progress tracking. Every vehicle is cleaned to standard before it moves to the next stage.", delay: 0.5 },
+    { label: "Movement & Staging", description: "Intelligent vehicle routing across depot lanes eliminates congestion and manual coordination. Every vehicle reaches the next step in the right sequence, at the right time.", delay: 1.0 },
+    { label: "Inspection", description: "Structured inspection workflows surface vehicle status in real time, with every check logged and verified. Nothing moves forward until the system confirms it is ready.", delay: 1.5 },
+    { label: "Triage & Service", description: "Automated escalation routes vehicles that need intervention beyond standard prep. Safety holds, maintenance flags, and exception handling are built into the workflow so nothing leaves unresolved.", delay: 2.0 },
+    { label: "Dispatch", description: "System-verified readiness gates ensure every vehicle leaving the depot is cleared, logged, and on time. No manual sign-off required.", delay: 2.5 },
   ];
 
   return (
