@@ -45,8 +45,9 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.6 }}
           className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          TARS is the orchestration layer for autonomous vehicle depot operations—replacing
-          whiteboards and radios with software-defined workflows that scale.
+          TARS AI is an AI-powered depot operator, owning the data, playbooks, and labor that keep
+          autonomous fleets on the road, maximizing uptime, minimizing cost per mile, and compounding
+          both with every depot we run.
         </motion.p>
 
         <motion.div

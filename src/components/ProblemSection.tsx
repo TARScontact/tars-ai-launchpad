@@ -33,6 +33,15 @@ const ProblemSection = () => {
       title: "No Orchestration Layer Exists",
       description: "Billions go into autonomy. Depot operations still run on tribal knowledge and shift-to-shift handoffs.",
     },
+    {
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" />
+        </svg>
+      ),
+      title: "18–24 Months",
+      description: "The time it takes to stand up a new city depot from scratch today. That timeline is the single biggest constraint on AV expansion velocity.",
+    },
   ];
 
   return (
@@ -48,7 +57,7 @@ const ProblemSection = () => {
             The Challenge
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            The Invisible Bottleneck
+            The Depot Is the Constraint on AV Scale
           </h2>
         </motion.div>
 
