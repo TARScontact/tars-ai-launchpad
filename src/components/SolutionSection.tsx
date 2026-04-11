@@ -28,7 +28,7 @@ const SolutionSection = () => {
             AI-Powered Depot Operations, Built to Scale City by City
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            TARS operates autonomous vehicle depots, combining software intelligence and operational playbooks to cut turnaround time, maximize uptime, and compress new city launch time from 18 months to 30 to 60 days.
+            TARS powers autonomous vehicle depot operations, combining software intelligence and operational playbooks to cut turnaround time, maximize uptime, and compress new city launch time from 18 months to 30 to 60 days.
           </p>
         </motion.div>
 
