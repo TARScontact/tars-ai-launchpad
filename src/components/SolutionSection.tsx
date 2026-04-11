@@ -6,12 +6,12 @@ const SolutionSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   const steps = [
-    { label: "Charging", description: "Optimized charging schedules that minimize downtime and maximize vehicle availability. Every charge cycle is tracked and sequenced to keep the fleet moving.", delay: 0 },
-    { label: "Cleaning", description: "Task-routed cleaning workflows with skill-based assignment and real-time progress tracking. Every vehicle is cleaned to standard before it moves to the next stage.", delay: 0.5 },
-    { label: "Movement & Staging", description: "Intelligent vehicle routing across depot lanes eliminates congestion and manual coordination. Every vehicle reaches the next step in the right sequence, at the right time.", delay: 1.0 },
-    { label: "Inspection", description: "Structured inspection workflows surface vehicle status in real time, with every check logged and verified. Nothing moves forward until the system confirms it is ready.", delay: 1.5 },
-    { label: "Triage & Service", description: "Automated escalation routes vehicles that need intervention beyond standard prep. Safety holds, maintenance flags, and exception handling are built into the workflow so nothing leaves unresolved.", delay: 2.0 },
-    { label: "Dispatch", description: "System-verified readiness gates ensure every vehicle leaving the depot is cleared, logged, and on time. No manual sign-off required.", delay: 2.5 },
+    { label: "Charging", description: "Every charge cycle scheduled, tracked, and optimized for maximum fleet availability.", delay: 0 },
+    { label: "Cleaning", description: "Skill-based task routing ensures every vehicle is cleaned to standard, every time.", delay: 0.5 },
+    { label: "Movement & Staging", description: "Intelligent lane routing eliminates depot congestion and manual coordination.", delay: 1.0 },
+    { label: "Inspection", description: "Every check logged and verified before a vehicle moves to the next stage.", delay: 1.5 },
+    { label: "Triage & Service", description: "Exceptions, safety holds, and interventions handled automatically, nothing leaves unresolved.", delay: 2.0 },
+    { label: "Dispatch", description: "System-verified readiness ensures every vehicle is cleared, logged, and on time.", delay: 2.5 },
   ];
 
   return (
