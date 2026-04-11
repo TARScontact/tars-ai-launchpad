@@ -15,7 +15,6 @@ const Navbar = () => {
   const links = [
     { label: "Problem", href: "#problem" },
     { label: "Solution", href: "#solution" },
-    { label: "Traction", href: "#traction" },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {

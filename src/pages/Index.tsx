@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
-import TractionSection from "@/components/TrustedBy";
+
 
 
 import ContactForm from "@/components/ContactForm";
@@ -15,7 +15,7 @@ const Index = () => {
       <Hero />
       <ProblemSection />
       <SolutionSection />
-      <TractionSection />
+      
       
       
       <ContactForm />
