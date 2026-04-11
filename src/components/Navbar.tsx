@@ -37,7 +37,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center">
-          <img src={tarsLogo} alt="TARS AI" className="h-8" />
+          <img src={tarsLogo} alt="TARS AI" className="h-10" />
         </a>
 
         {/* Desktop */}
