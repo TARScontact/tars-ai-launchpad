@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroNetwork from "@/assets/hero-network.png";
+
 
 const Hero = () => {
   return (
