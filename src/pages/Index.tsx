@@ -15,7 +15,7 @@ const Index = () => {
       <Hero />
       <ProblemSection />
       <SolutionSection />
-      <TractionSection />
+      
       
       
       <ContactForm />
