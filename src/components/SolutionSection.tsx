@@ -39,9 +39,9 @@ const SolutionSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="max-w-3xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
-          <div className="flex items-start justify-between relative">
+          <div className="grid grid-cols-6 gap-4 relative">
             <div className="absolute top-5 md:top-6 left-0 right-0 h-px bg-border" />
             <motion.div
               className="absolute top-5 md:top-6 left-0 h-px bg-primary"
@@ -52,7 +52,7 @@ const SolutionSection = () => {
             {steps.map((step) => (
               <motion.div
                 key={step.label}
-                className="relative z-10 flex flex-col items-center max-w-[150px]"
+                className="relative z-10 flex flex-col items-center"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.5 + step.delay * 0.4 }}
