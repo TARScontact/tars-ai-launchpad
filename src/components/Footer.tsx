@@ -4,7 +4,7 @@ const Footer = () => {
   const quickLinks = [
     { label: "Problem", href: "#problem" },
     { label: "Solution", href: "#solution" },
-    { label: "Traction", href: "#traction" },
+  ];
   ];
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
