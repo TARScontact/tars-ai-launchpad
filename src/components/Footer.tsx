@@ -12,28 +12,31 @@ const Footer = () => {
   };
 
   return (
-    <footer className="border-t border-border py-16">
+    <footer className="bg-neutral-700 py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
           {/* Left - Brand */}
           <div>
-            <img src={tarsLogo} alt="TARS AI" className="h-7 mb-4" />
-            <p className="text-muted-foreground text-xs leading-relaxed mb-4 max-w-[240px]">
+            <div className="flex items-center gap-1.5 mb-4">
+              <img src={tarsLogo} alt="TARS AI" className="h-7" />
+              <span className="text-white font-bold text-lg tracking-wide leading-none">AI</span>
+            </div>
+            <p className="text-neutral-300 text-xs leading-relaxed mb-4 max-w-[240px]">
               AI-powered depot operations for autonomous fleets, maximizing uptime and minimizing cost per mile with every depot we run.
             </p>
-            <span className="text-muted-foreground text-xs">© 2026 TARS AI Inc.</span>
+            <span className="text-neutral-300 text-xs">© 2026 TARS AI Inc.</span>
           </div>
 
           {/* Center - Quick Links */}
           <div>
-            <h4 className="text-foreground text-sm font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-white text-sm font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     onClick={(e) => handleClick(e, link.href)}
-                    className="text-muted-foreground text-xs hover:text-foreground transition-colors"
+                    className="text-neutral-300 text-xs hover:text-white transition-colors"
                   >
                     {link.label}
                   </a>
@@ -44,10 +47,10 @@ const Footer = () => {
 
           {/* Right - Connect */}
           <div>
-            <h4 className="text-foreground text-sm font-semibold mb-4">Connect</h4>
+            <h4 className="text-white text-sm font-semibold mb-4">Connect</h4>
             <ul className="space-y-2">
               <li>
-                <a href="mailto:contact@tarsgroup.co" className="text-muted-foreground text-xs hover:text-foreground transition-colors">
+                <a href="mailto:contact@tarsgroup.co" className="text-neutral-300 text-xs hover:text-white transition-colors">
                   contact@tarsgroup.co
                 </a>
               </li>
@@ -57,7 +60,7 @@ const Footer = () => {
                   href="https://linkedin.com/company/tarsgroup"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground text-xs hover:text-foreground transition-colors inline-flex items-center gap-1.5"
+                  className="text-neutral-300 text-xs hover:text-white transition-colors inline-flex items-center gap-1.5"
                   aria-label="LinkedIn"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
