@@ -51,7 +51,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a href="mailto:contact@tarsgroup.co" className="text-neutral-300 text-xs hover:text-white transition-colors">
-                  contact@tarsgroup.co
+                  contact@tarsai.co
                 </a>
               </li>
               <li>
